@@ -8,3 +8,21 @@ function isOdd(number) {
 }
 
 // console.log(isOdd("3"));
+
+// 2)
+function logOddNumbers() {
+  for (let i = 1; i <= 99; i += 2) {
+    console.log(i);
+  }
+}
+
+// logOddNumbers();
+
+// 3)
+function logEvenNumbers() {
+  for (let i = 2; i <= 98; i += 2) {
+    console.log(i);
+  }
+}
+
+logEvenNumbers();
