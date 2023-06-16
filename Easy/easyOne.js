@@ -76,6 +76,7 @@ calculateTotalBill(bill, tipPercentage);
 */
 
 // 6)
+/*
 const readline = require("readline-sync");
 let inputNumber = readline.question(
   "Please enter an integer greater than zero: "
@@ -105,3 +106,17 @@ function calculateConsecutiveIntegers(targetNumber, operator) {
 }
 
 calculateConsecutiveIntegers(inputNumber, arithmeticInput);
+*/
+
+// 7)
+function shortLongShort(stringOne, stringTwo) {
+  if (stringOne.length > stringTwo.length) {
+    console.log(stringTwo + stringOne + stringTwo);
+  } else {
+    console.log(stringOne + stringTwo + stringOne);
+  }
+}
+
+shortLongShort("abc", "defgh");
+shortLongShort("abcde", "fgh");
+shortLongShort("", "xyz");
