@@ -1,4 +1,5 @@
 // 1)
+/*
 function isOdd(number) {
   if (Math.abs(number) % 2 !== 0) {
     return true;
@@ -7,26 +8,30 @@ function isOdd(number) {
   }
 }
 
-// console.log(isOdd("3"));
+console.log(isOdd("3"));
+*/
 
 // 2)
+/*
 function logOddNumbers() {
   for (let i = 1; i <= 99; i += 2) {
     console.log(i);
   }
 }
 
-// logOddNumbers();
+logOddNumbers();
+*/
 
 // 3)
-
+/*
 function logEvenNumbers() {
   for (let i = 2; i <= 98; i += 2) {
     console.log(i);
   }
 }
 
-// logEvenNumbers();
+logEvenNumbers();
+*/
 
 // 4)
 /*
@@ -50,4 +55,24 @@ function calculateRoomArea(length, width) {
 calculateRoomArea(length, width);
 */
 
-// 4)
+// 5)
+/*
+const readline = require("readline-sync");
+let bill = readline.question("Please enter the bill: ");
+let tipPercentage = readline.question(
+  "Please enter how much you'd like to tip (as a percentage): "
+);
+
+function calculateTotalBill(bill, tip) {
+  bill = Number(bill);
+  tip = Number(tip);
+  let tipAmount = (tip / 100) * bill;
+  let totalBill = bill + tipAmount;
+  console.log(`The tip is $${tipAmount.toFixed(2)}`);
+  console.log(`The total bill is $${totalBill.toFixed(2)}`);
+}
+
+calculateTotalBill(bill, tipPercentage);
+*/
+
+// 6)
