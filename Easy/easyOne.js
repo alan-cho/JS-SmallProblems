@@ -76,3 +76,32 @@ calculateTotalBill(bill, tipPercentage);
 */
 
 // 6)
+const readline = require("readline-sync");
+let inputNumber = readline.question(
+  "Please enter an integer greater than zero: "
+);
+let arithmeticInput = readline
+  .question("Would you like to use addition or multiplication (A/M): ")
+  .toUpperCase();
+
+function calculateConsecutiveIntegers(targetNumber, operator) {
+  if (operator === "A") {
+    let result = 0;
+    for (let i = 1; i <= targetNumber; i += 1) {
+      result += i;
+    }
+    console.log(
+      `The sum of integers between 1 and ${targetNumber} is ${result}.`
+    );
+  } else {
+    let result = 1;
+    for (let i = 1; i <= targetNumber; i += 1) {
+      result *= i;
+    }
+    console.log(
+      `The product of integers between 1 and ${targetNumber} is ${result}.`
+    );
+  }
+}
+
+calculateConsecutiveIntegers(inputNumber, arithmeticInput);
