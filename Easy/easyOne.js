@@ -109,6 +109,7 @@ calculateConsecutiveIntegers(inputNumber, arithmeticInput);
 */
 
 // 7)
+/*
 function shortLongShort(stringOne, stringTwo) {
   if (stringOne.length > stringTwo.length) {
     console.log(stringTwo + stringOne + stringTwo);
@@ -120,3 +121,30 @@ function shortLongShort(stringOne, stringTwo) {
 shortLongShort("abc", "defgh");
 shortLongShort("abcde", "fgh");
 shortLongShort("", "xyz");
+*/
+
+// 8)
+/*
+function isLeapYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    } else {
+      console.log(true);
+    }
+  } else {
+    console.log(false);
+  }
+}
+
+isLeapYear(2016);
+isLeapYear(2015);
+isLeapYear(2100);
+isLeapYear(2400);
+*/
+
+// 9)
