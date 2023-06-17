@@ -194,3 +194,17 @@ console.log(multiSum(1000));
 */
 
 // 11)
+/*
+function utf16Value(string) {
+  let result = 0;
+  for (let i = 0; i < string.length; i += 1) {
+    result += string.charCodeAt(i);
+  }
+  return result;
+}
+
+console.log(utf16Value("Four score"));
+console.log(utf16Value("Launch School"));
+console.log(utf16Value("a"));
+console.log(utf16Value(""));
+*/
