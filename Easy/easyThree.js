@@ -95,3 +95,29 @@ console.log(madLibs(noun, verb, adjective, adverb));
 */
 
 // 7)
+/*
+function twice(digits) {
+  let stringDigits = digits.toString();
+  if (stringDigits.length % 2 !== 0) {
+    console.log(digits * 2);
+  } else if (
+    stringDigits.slice(0, stringDigits.length / 2) ===
+    stringDigits.slice(stringDigits.length / 2)
+  ) {
+    console.log(digits);
+  } else {
+    console.log(digits * 2);
+  }
+}
+
+twice(37); // 74
+twice(44); // 44
+twice(334433); // 668866
+twice(444); // 888
+twice(107); // 214
+twice(103103); // 103103
+twice(3333); // 3333
+twice(7676); // 7676
+*/
+
+// 8)
