@@ -148,3 +148,31 @@ isLeapYear(2400);
 */
 
 // 9)
+/*
+function isLeapYearGregorian(year) {
+  if (year < 1752) {
+    if (year % 4 === 0) {
+      console.log(true);
+    }
+  } else if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+    } else {
+      console.log(true);
+    }
+  } else {
+    console.log(false);
+  }
+}
+
+isLeapYearGregorian(2016);
+isLeapYearGregorian(2015);
+isLeapYearGregorian(2100);
+isLeapYearGregorian(2400);
+*/
+
+// 10)
