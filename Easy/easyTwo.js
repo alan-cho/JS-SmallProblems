@@ -143,3 +143,21 @@ console.log(teddy());
 */
 
 // 10)
+/*
+const readline = require("readline-sync");
+
+function retire(initialAge, finalAge) {
+  let currentYear = new Date().getFullYear();
+  let ageDifference = finalAge - initialAge;
+  return `It's ${currentYear}. You will retire in ${
+    currentYear + ageDifference
+  }!\nYou have only ${ageDifference} years left to go!`;
+}
+
+let initialAge = readline.question("Enter your age: ");
+let finalAge = readline.question("Enter the age you'd like to retire: ");
+
+console.log(retire(initialAge, finalAge));
+*/
+
+// 11)
