@@ -22,3 +22,14 @@ console.log(crunch(""));
 */
 
 // 2)
+function logInBox(string) {
+  let message = " " + string + " ";
+  let width = message.length;
+  let horizontalBorder = `+${"-".repeat(width)}+`;
+  let verticalBorder = `|${" ".repeat(width)}|`;
+  let messageLine = `|${message}|`;
+  return `${horizontalBorder}\n${verticalBorder}\n${messageLine}\n${verticalBorder}\n${horizontalBorder}`;
+}
+
+console.log(logInBox("To boldly go where no one has gone before."));
+console.log(logInBox(""));
