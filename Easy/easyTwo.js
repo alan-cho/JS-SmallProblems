@@ -41,3 +41,16 @@ console.log(multiply(5, 3) === 15);
 */
 
 // 4)
+/*
+function multiply(numberOne, numberTwo) {
+  return numberOne * numberTwo;
+}
+
+function square(number) {
+  return multiply(number, number);
+}
+
+console.log(square(-5) === 25);
+*/
+
+// 5)
