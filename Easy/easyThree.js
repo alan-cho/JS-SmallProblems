@@ -121,3 +121,24 @@ twice(7676); // 7676
 */
 
 // 8)
+/*
+function getGrade(gradeOne, gradeTwo, gradeThree) {
+  let average = (gradeOne + gradeTwo + gradeThree) / 3;
+  if (90 <= average && average <= 100) {
+    console.log("A");
+  } else if (80 <= average && average <= 89) {
+    console.log("B");
+  } else if (70 <= average && average <= 79) {
+    console.log("C");
+  } else if (60 <= average && average <= 69) {
+    console.log("D");
+  } else {
+    console.log("F");
+  }
+}
+
+getGrade(95, 90, 93);
+getGrade(50, 50, 95);
+*/
+
+// 9)
