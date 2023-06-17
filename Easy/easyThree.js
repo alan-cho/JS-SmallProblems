@@ -58,4 +58,24 @@ console.log(stringy(4));
 console.log(stringy(7));
 */
 
-// 4)
+// 4) Moved to medium difficulty problems - skipped.
+
+// 5)
+/*
+function triangle(base) {
+  result = "";
+  for (let i = 1; i < base + 1; i += 1) {
+    if (i === base) {
+      result += `\n${"*".repeat(i)}`;
+    } else {
+      result += `\n${" ".repeat(base - i)}${"*".repeat(i)}`;
+    }
+  }
+  return result;
+}
+
+console.log(triangle(5));
+console.log(triangle(9));
+*/
+
+// 6)
