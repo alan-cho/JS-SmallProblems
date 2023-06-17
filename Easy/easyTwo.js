@@ -12,3 +12,23 @@ console.log(
 */
 
 // 2)
+/*
+const readline = require("readline-sync");
+
+function greeting(name) {
+  if (name.includes("!")) {
+    console.log(
+      `HELLO ${name
+        .slice(0, name.length - 1)
+        .toUpperCase()}, WHY ARE WE SCREAMING?`
+    );
+  } else {
+    console.log(`Hello ${name}.`);
+  }
+}
+
+let name = readline.question("Please state your name: ");
+greeting(name);
+*/
+
+// 3)
