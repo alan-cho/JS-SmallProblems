@@ -32,3 +32,12 @@ greeting(name);
 */
 
 // 3)
+/*
+function multiply(numberOne, numberTwo) {
+  return numberOne * numberTwo;
+}
+
+console.log(multiply(5, 3) === 15);
+*/
+
+// 4)
