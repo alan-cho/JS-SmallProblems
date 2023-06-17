@@ -54,3 +54,36 @@ console.log(square(-5) === 25);
 */
 
 // 5)
+/*
+const readline = require("readline-sync");
+
+function arithmeticCalculator(firstNum, secondNum) {
+  console.log(
+    `==> ${firstNum} + ${secondNum} = ${
+      firstNum + secondNum
+    } \n==> ${firstNum} - ${secondNum} = ${
+      firstNum - secondNum
+    } \n==> ${firstNum} * ${secondNum} = ${
+      firstNum * secondNum
+    } \n==> ${firstNum} / ${secondNum} = ${Math.floor(
+      firstNum / secondNum
+    )} \n==> ${firstNum} % ${secondNum} = ${
+      firstNum % secondNum
+    } \n==> ${firstNum} ** ${secondNum} = ${firstNum ** secondNum}`
+  );
+}
+
+let firstNum = Number(readline.question("Please enter the first number: "));
+let secondNum = Number(readline.question("Please enter the second number: "));
+
+arithmeticCalculator(firstNum, secondNum);
+*/
+
+// 6)
+function penultimate(string) {
+  let array = string.split(" ");
+  return array[array.length - 2];
+}
+
+console.log(penultimate("last word") === "last");
+console.log(penultimate("Launch School is great!") === "is");
