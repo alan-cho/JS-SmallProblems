@@ -130,3 +130,16 @@ console.log(oddities([]));
 */
 
 // 9)
+/*
+function teddy() {
+  let age = Math.floor(Math.random() * 120);
+  if (age < 20) {
+    age += 20;
+  }
+  return `Teddy is ${age} years old!`;
+}
+
+console.log(teddy());
+*/
+
+// 10)
