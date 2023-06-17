@@ -22,6 +22,7 @@ console.log(crunch(""));
 */
 
 // 2)
+/*
 function logInBox(string) {
   let message = " " + string + " ";
   let width = message.length;
@@ -33,3 +34,28 @@ function logInBox(string) {
 
 console.log(logInBox("To boldly go where no one has gone before."));
 console.log(logInBox(""));
+*/
+
+// 3)
+/*
+function stringy(length) {
+  let result = "";
+  let isOne = true;
+  for (let i = 0; i < length; i += 1) {
+    if (isOne) {
+      result += "1";
+    } else {
+      result += "0";
+    }
+    isOne = !isOne;
+  }
+  return result;
+}
+
+console.log(stringy(6));
+console.log(stringy(9));
+console.log(stringy(4));
+console.log(stringy(7));
+*/
+
+// 4)
