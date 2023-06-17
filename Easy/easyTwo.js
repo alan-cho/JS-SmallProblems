@@ -113,3 +113,20 @@ console.log(xor(true, true) === false);
 */
 
 // 8)
+/*
+function oddities(array) {
+  let result = [];
+  for (let i = 0; i <= array.length - 1; i += 2) {
+    result.push(array[i]);
+  }
+  return result;
+}
+
+console.log(oddities([2, 3, 4, 5, 6]));
+console.log(oddities([1, 2, 3, 4, 5, 6]));
+console.log(oddities(["abc", "def"]));
+console.log(oddities([123]));
+console.log(oddities([]));
+*/
+
+// 9)
