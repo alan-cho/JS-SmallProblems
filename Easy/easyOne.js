@@ -176,3 +176,21 @@ isLeapYearGregorian(2400);
 */
 
 // 10)
+/*
+function multiSum(number) {
+  let result = 0;
+  for (let i = 1; i <= number; i += 1) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      result += i;
+    }
+  }
+  return result;
+}
+
+console.log(multiSum(3));
+console.log(multiSum(5));
+console.log(multiSum(10));
+console.log(multiSum(1000));
+*/
+
+// 11)
