@@ -170,9 +170,24 @@ function centerOf(string) {
   }
 }
 
-console.log(centerOf("I Love JavaScript")); // "a"
-console.log(centerOf("Launch School")); // " "
-console.log(centerOf("Launch")); // "un"
-console.log(centerOf("Launchschool")); // "hs"
-console.log(centerOf("x")); // "x"
+console.log(centerOf("I Love JavaScript"));
+console.log(centerOf("Launch School")); 
+console.log(centerOf("Launch"));
+console.log(centerOf("Launchschool"));
+console.log(centerOf("x"));
+*/
+
+// 12)
+/*
+function returnNegative(number) {
+  if (number < 0) {
+    return number;
+  } else {
+    return -number;
+  }
+}
+
+console.log(returnNegative(5));
+console.log(returnNegative(-3));
+console.log(returnNegative(0));
 */
