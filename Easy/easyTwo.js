@@ -80,6 +80,7 @@ arithmeticCalculator(firstNum, secondNum);
 */
 
 // 6)
+/*
 function penultimate(string) {
   let array = string.split(" ");
   return array[array.length - 2];
@@ -87,3 +88,28 @@ function penultimate(string) {
 
 console.log(penultimate("last word") === "last");
 console.log(penultimate("Launch School is great!") === "is");
+*/
+
+// 7)
+/*
+function xor(operandOne, operandTwo) {
+  if (operandOne) {
+    if (operandTwo == false) {
+      return true;
+    } else {
+      return false;
+    }
+  } else if (operandTwo) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(xor(5, 0) === true);
+console.log(xor(false, true) === true); 
+console.log(xor(1, 1) === false); 
+console.log(xor(true, true) === false);
+*/
+
+// 8)
