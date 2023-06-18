@@ -142,3 +142,12 @@ getGrade(50, 50, 95);
 */
 
 // 9)
+/*
+function cleanUp(text) {
+  return text.replace(/[^a-z]/gi, " ").replace(/\s+/gi, " ");
+}
+
+console.log(cleanUp("---what's my +*& line?"));
+*/
+
+// 10)
