@@ -271,3 +271,69 @@ console.log(runningTotal([14, 11, 7, 15, 20]));
 console.log(runningTotal([3]));
 console.log(runningTotal([]));
 */
+
+//6)
+/*
+Understand the Problem
+  Input: String
+  Output: Object
+
+  Explicit:
+    String can contain zero or more words that are delimited by a whitespace.
+    Words are considered any sequence of non-space characters, including puncutation.
+    Return an object that holds the number of words that have that amount of characters.
+
+  Implicit:
+    Inputs can be empty.
+    Case insensitive.
+    Puncutation is included as part of the word, but not spaces.
+
+Example / Test Cases
+  wordSizes('Four score and seven.');                       // { "3": 1, "4": 1, "5": 1, "6": 1 }
+  wordSizes('Hey diddle diddle, the cat and the fiddle!');  // { "3": 5, "6": 1, "7": 2 }
+  wordSizes("What's up doc?");                              // { "2": 1, "4": 1, "6": 1 }
+  wordSizes('');                                            // {}
+
+Data Structures
+  Object to return the results.
+
+Algorithms
+  Split the string into an array consisting of the words.
+  Iterate through the array.
+  Count the amount of words that have the same values.
+    Iterate through the array with a for loop.
+    Evaluate the length of the word of i.
+      Iterate through another loop.
+        If the length of the word[i] matches the iteration of the rest of the array.
+        Increase the count by one.
+  Add the length of the words as keys, and their length value as values.
+
+Implement the Code
+
+function wordSizes(string) {
+  let arrayStr = string.split(" ");
+  let resultObj = {};
+  if (string === "") {
+    return console.log(resultObj);
+  }
+
+  for (let i = 0; i < arrayStr.length; i += 1) {
+    let wordLengthHolder = arrayStr[i].length;
+    let countLength = 0;
+    for (let j = 0; j < arrayStr.length; j += 1) {
+      if (arrayStr[j].length === wordLengthHolder) {
+        countLength += 1;
+      }
+    }
+    resultObj[wordLengthHolder] = countLength;
+  }
+  return console.log(resultObj);
+}
+
+wordSizes("Four score and seven.");
+wordSizes("Hey diddle diddle, the cat and the fiddle!");
+wordSizes("What's up doc?");
+wordSizes("");
+*/
+
+//7)
