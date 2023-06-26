@@ -149,5 +149,3 @@ function cleanUp(text) {
 
 console.log(cleanUp("---what's my +*& line?"));
 */
-
-// 10)
