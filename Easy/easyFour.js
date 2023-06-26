@@ -337,3 +337,33 @@ wordSizes("");
 */
 
 //7)
+/*
+function wordSizes(string) {
+  const regex = /[\W]/gi;
+  let arrayStr = string.split(" ");
+  let resultObj = {};
+  if (string === "") {
+    return console.log(resultObj);
+  }
+
+  for (let i = 0; i < arrayStr.length; i += 1) {
+    let filteredWord = arrayStr[i].replace(regex, "");
+    let wordLengthHolder = filteredWord.length;
+    let countLength = 0;
+    for (let j = 0; j < arrayStr.length; j += 1) {
+      if (arrayStr[j].replace(regex, "").length === wordLengthHolder) {
+        countLength += 1;
+      }
+    }
+    resultObj[wordLengthHolder] = countLength;
+  }
+  return console.log(resultObj);
+}
+
+wordSizes("Four score and seven."); // { "3": 1, "4": 1, "5": 2 }
+wordSizes("Hey diddle diddle, the cat and the fiddle!"); // { "3": 5, "6": 3 }
+wordSizes("What's up doc?"); // { "2": 1, "3": 1, "5": 1 }
+wordSizes(""); // {}
+*/
+
+//8)
