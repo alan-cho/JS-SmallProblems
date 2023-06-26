@@ -225,3 +225,49 @@ console.log(isPalindrome(integerInput));
 */
 
 //5)
+/*
+Understand the Problem
+  Input: Array of Integers
+  Output: Array of Integers
+
+  Explicit:
+    Each element in the returned array is the total of all the previous elements.
+    Have to return an array.
+
+  Implicit:
+    Empty arrays are possible.
+    No limit to how many numbers are given.
+
+Examples / Test Cases
+  runningTotal([2, 5, 13]);             // [2, 7, 20]
+  runningTotal([14, 11, 7, 15, 20]);    // [14, 25, 32, 47, 67]
+  runningTotal([3]);                    // [3]
+  runningTotal([]);                     // []
+
+Data Structures
+  Use an array to return the added values.
+
+Algorithm
+  Iterate through the input array and keep a variable to save the total value.
+  After each iteration, add the total value to the new array.
+  Return the new array.
+
+Implement the Code
+
+function runningTotal(array) {
+  let total = 0;
+  let result = [];
+
+  array.forEach(function (number) {
+    total += number;
+    result.push(total);
+  });
+
+  return result;
+}
+
+console.log(runningTotal([2, 5, 13]));
+console.log(runningTotal([14, 11, 7, 15, 20]));
+console.log(runningTotal([3]));
+console.log(runningTotal([]));
+*/
