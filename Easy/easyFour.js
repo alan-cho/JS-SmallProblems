@@ -183,3 +183,45 @@ console.log(compareTwoHalves(firstHalf, secondHalf));
 */
 
 //4)
+/*
+Understand the Problem
+  Input: Integer
+  Output: Boolean
+
+  Explicit:
+    Checks if the integer is a palindrome.
+    Returns a boolean value on whether it's true or false.
+
+  Implicit:
+    There will always be a number.
+    The input will only be integers.
+    The length of the number will be different.
+
+Examples / Test Cases
+  isPalindromicNumber(34543);        // true
+  isPalindromicNumber(123210);       // false
+  isPalindromicNumber(22);           // true
+  isPalindromicNumber(5);            // true
+  
+Data Structure
+  Use a string to contain the digits.
+
+Algorithm
+  Convert the digits into a string.
+  Split the string and compare the two halves.
+  Return the result.
+
+Implement the Code
+
+const readline = require("readline-sync");
+
+let integerInput = readline.question("Enter a number: ");
+
+function isPalindrome(string) {
+  return string === string.split("").reverse().join("");
+}
+
+console.log(isPalindrome(integerInput));
+*/
+
+//5)
