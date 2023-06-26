@@ -67,3 +67,60 @@ console.log(isWithinRange(maxNum, minNum, lastNumber));
 */
 
 //2)
+/*
+Understand the Problem
+  Input: String 
+  Output: Boolean
+
+  Explicit: 
+    Check if the string inputted is a palindrome.
+    Palindrome is a string where the second half is the reversed order of the first half.
+    All characters are matter - whitespace, numbers, punctuation.
+  Implicit:
+    There's no empty strings.
+
+Examples / Test Cases
+  isPalindrome('madam');               // true
+  isPalindrome('Madam');               // false (case matters)
+  isPalindrome("madam i'm adam");      // false (all characters matter)
+  isPalindrome('356653');              // true
+
+Data Structure
+  A string stores the input value.
+
+Algorithm
+  Take the input value.
+  Create two new strings - representing the two halves of the string.
+  Reverse the second half and compare the two strings.
+  Return the comparison.
+
+Implement the Code
+
+
+const readline = require("readline-sync");
+
+let inputString = readline.question("Enter a string: ");
+
+function createTwoHalves(string) {
+  if (string.length % 2 === 1) {
+    let firstHalfOdd = string.slice(0, string.length / 2 + 1);
+    let secondHalfOdd = string.slice(string.length / 2);
+    return [firstHalfOdd, secondHalfOdd];
+  } else {
+    let firstHalfEven = string.slice(0, string.length / 2);
+    let secondHalfEven = string.slice(string.length / 2);
+    return [firstHalfEven, secondHalfEven];
+  }
+}
+
+function compareTwoHalves(firstHalf, secondHalf) {
+  let reversalSecondHalf = secondHalf.split("").reverse().join("");
+  return firstHalf === reversalSecondHalf;
+}
+
+let [firstHalf, secondHalf] = createTwoHalves(inputString);
+
+console.log(compareTwoHalves(firstHalf, secondHalf));
+*/
+
+//3)
