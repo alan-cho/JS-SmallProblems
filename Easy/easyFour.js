@@ -124,3 +124,62 @@ console.log(compareTwoHalves(firstHalf, secondHalf));
 */
 
 //3)
+/*
+Understand the Problem
+  Input: String
+  Output: Boolean
+  
+  Explicit:
+    Check if the string is a palidrome.
+    When checking, the conditional is case insensitive and ignore all non-alphanumeric characters.
+
+  Implicit:
+
+Examples / Test Cases
+  isRealPalindrome('madam');               // true
+  isRealPalindrome('Madam');               // true (case does not matter)
+  isRealPalindrome("Madam, I'm Adam");     // true (only alphanumerics matter)
+  isRealPalindrome('356653');              // true
+  isRealPalindrome('356a653');             // true
+  isRealPalindrome('123ab321');            // false
+
+Data Structure
+  Same structure as the previous question!
+
+Algorithm
+  Same algorithm except add an extra step to filter out punctuation and whitespace.
+
+Implement the Code
+
+const readline = require("readline-sync");
+
+let inputString = readline.question("Enter a string: ");
+let filteredString = inputString
+  .toLowerCase()
+  .split("")
+  .filter((element) => element == /[\W]/gi)
+  .join("");
+
+function createTwoHalves(string) {
+  if (string.length % 2 === 1) {
+    let firstHalfOdd = string.slice(0, string.length / 2 + 1);
+    let secondHalfOdd = string.slice(string.length / 2);
+    return [firstHalfOdd, secondHalfOdd];
+  } else {
+    let firstHalfEven = string.slice(0, string.length / 2);
+    let secondHalfEven = string.slice(string.length / 2);
+    return [firstHalfEven, secondHalfEven];
+  }
+}
+
+function compareTwoHalves(firstHalf, secondHalf) {
+  let reversalSecondHalf = secondHalf.split("").reverse().join("");
+  return firstHalf === reversalSecondHalf;
+}
+
+let [firstHalf, secondHalf] = createTwoHalves(filteredString);
+
+console.log(compareTwoHalves(firstHalf, secondHalf));
+*/
+
+//4)
