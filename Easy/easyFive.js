@@ -424,3 +424,17 @@ let vehicles = [
 
 countOccurrences(vehicles);
 */
+
+//10)
+/*
+function average(array) {
+  let runningTotal = 1;
+  array.forEach((num) => (runningTotal += num));
+  return console.log(Math.floor(runningTotal / array.length));
+}
+
+average([1, 5, 87, 45, 8, 8]); // 25
+average([9, 47, 23, 95, 16, 52]); // 40
+*/
+
+//11)
