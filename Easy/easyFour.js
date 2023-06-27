@@ -367,3 +367,49 @@ wordSizes(""); // {}
 */
 
 //8)
+/*
+Understand the Problem
+  Input: String
+  Output: String
+
+  Explicit:
+    Given a string containing words delimited by whitespace.
+    Reverse the first and last letter of each word.
+
+  Implicit:
+    If there's only one letter, there's nothing to swap.
+    The swapping is case sensitive.
+
+Data Structures
+  String
+
+Algorithms
+  Convert the string into an array.
+  Iterate over the array, swapping the last and first characters of each word.
+  Join the elements together and return the new string.
+
+Implement the Code
+
+function swap(string) {
+  let arrayStr = string.split(" ");
+  let resultStr = "";
+
+  if (string.length <= 1) {
+    return console.log(string);
+  }
+
+  arrayStr.forEach(function (word) {
+    let swappedWord =
+      word.charAt(word.length - 1) + word.slice(1, -1) + word.charAt(0);
+    resultStr += " " + swappedWord + " ";
+  });
+
+  return console.log(resultStr.trim());
+}
+
+swap("Oh what a wonderful day it is"); // "hO thaw a londerfuw yad ti si"
+swap("Abcde"); // "ebcdA"
+swap("a"); // "a"
+*/
+
+//9)
