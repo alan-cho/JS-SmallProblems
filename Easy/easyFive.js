@@ -368,3 +368,59 @@ digitList(444); // [4, 4, 4]
 */
 
 //9)
+/*
+Understand the Problem
+  Input: Array
+  Output: Series of Strings Logged
+
+  Explicit:
+    Given an array, output the occurences of a specific element in that array.
+    Output a string representing the occurence for each individual element.
+
+  Implicit:
+    The array can contain any value.
+
+Data Structures
+  Array, String, and Object
+
+Algorithms
+  Create a placeholder object.
+  Iterate through the array.
+  If the element is unique or doesn't exist in the object, add it to the object.
+  If the element matches an existing element, increase that key-value by one.
+  Log the entries by string.
+
+Implement the Code
+
+function countOccurrences(array) {
+  let holdOccurences = {};
+  array.forEach(function (element) {
+    if (Object.keys(holdOccurences).includes(element)) {
+      holdOccurences[element] += 1;
+    } else {
+      holdOccurences[element] = 1;
+    }
+  });
+
+  let arrayOfOccurences = Object.entries(holdOccurences);
+  arrayOfOccurences.forEach(function (keyValuePair) {
+    let [element, occurences] = keyValuePair;
+    console.log(`There are ${occurences} elements of ${element}.`);
+  });
+}
+
+let vehicles = [
+  "car",
+  "car",
+  "truck",
+  "car",
+  "SUV",
+  "truck",
+  "motorcycle",
+  "motorcycle",
+  "car",
+  "truck",
+];
+
+countOccurrences(vehicles);
+*/
