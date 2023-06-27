@@ -256,3 +256,40 @@ interLeave([1, 2, 3], ["a", "b", "c"]); // [1, "a", 2, "b", 3, "c"]
 */
 
 //6)
+/*
+Understand the Problem
+  Input: Array
+  Output: String
+
+  Explicit:
+    Take an array of integers and multiply all the elements together.
+    Divide by the number of elements in the array.
+    Return that evaluated number as a string, rounded to three decimal places.
+
+Data Structures
+  Array and String
+
+Algorithms
+  Iterate through the array.
+  Multiply each element with the running total.
+  Divide by the length of the array.
+  Round the number and return it as a string.
+
+Implement the Code
+
+function multiplicativeAverage(array) {
+  let runningTotal = 1;
+  array.forEach((num) => (runningTotal *= num));
+
+  runningTotal = runningTotal / array.length;
+
+  let result = String(runningTotal.toFixed(3));
+
+  return console.log(result);
+}
+
+multiplicativeAverage([3, 5]); // "7.500"
+multiplicativeAverage([2, 5, 7, 11, 13, 17]); // "28361.667"
+*/
+
+//7)
