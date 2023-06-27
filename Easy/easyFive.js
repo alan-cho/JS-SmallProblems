@@ -329,3 +329,42 @@ function multiplyList(arrayOne, arrayTwo) {
 
 multiplyList([3, 5, 7], [9, 10, 11]); // [27, 50, 77];
 */
+
+//8)
+/*
+Understand the Problem
+  Input: Integer
+  Output: Array
+
+  Explicit:
+    Given a positive, non-zero integer, return an array containing each individual digit that represents the input. 
+
+Data Structures
+  Array
+
+Algorithms
+  Create an array.
+  While loop until the integer is not 0.
+  Keep dividing the input by 10, and assign its remainder to a variable.
+  Push that variable to the array.
+  Return the array.
+
+Implement the Code
+
+function digitList(number) {
+  let result = [];
+  while (number !== 0) {
+    result.push(number % 10);
+    number = Math.trunc(number / 10);
+  }
+
+  return console.log(result.reverse());
+}
+
+digitList(12345); // [1, 2, 3, 4, 5]
+digitList(7); // [7]
+digitList(375290); // [3, 7, 5, 2, 9, 0]
+digitList(444); // [4, 4, 4]
+*/
+
+//9)
