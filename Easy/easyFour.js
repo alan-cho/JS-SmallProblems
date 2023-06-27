@@ -412,21 +412,4 @@ swap("Abcde"); // "ebcdA"
 swap("a"); // "a"
 */
 
-//9)
-/*
-Understand the Problem
-  Input:
-  Output:
-
-  Explicit:
-
-  Implicit:
-
-Example / Test Cases
-
-Data Structures
-
-Algorithms
-
-Implement the Code
-*/
+//9-12) SKIPPED
