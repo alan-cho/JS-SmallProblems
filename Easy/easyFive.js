@@ -95,3 +95,67 @@ union([1, 3, 5], [3, 6, 9]); // [1, 3, 5, 6, 9]
 */
 
 //3)
+/*
+Understand the Problem
+  Input: Array
+  Output: Nested Array
+
+  Explicit:
+    Return a nested array containing two elements:
+      Two separate arrays
+    The nested arrays are the two halves of the inputted array.
+    If the input array length is odd, then put the middle element in the first nested array.
+
+Data Structures
+  Array
+
+Algorithms
+  Find the middle element of the input array.
+  Create a return array.
+  Iterate through the input array up until the middle element.
+    Create a new array that saves these elements.
+  Repeat for the second half of the input array.
+  Push both new arrays into the return array.
+  Return the return array.
+
+Implement the Code
+
+function halvsies(array) {
+  let result = [];
+  let isArrayEven = checkEven(array);
+  let middleIndex = findMiddleIndex(array, isArrayEven);
+
+  let firstHalf = createArray(array, 0, middleIndex);
+  let secondHalf = createArray(array, middleIndex + 1, array.length - 1);
+
+  result.push(firstHalf, secondHalf);
+  return console.log(result);
+}
+
+function checkEven(array) {
+  return array.length % 2 === 0;
+}
+
+function findMiddleIndex(array, isEven) {
+  if (isEven) {
+    return array.length / 2 - 1;
+  } else {
+    return Math.floor(array.length / 2);
+  }
+}
+
+function createArray(array, startIndex, endIndex) {
+  let result = [];
+  for (let i = startIndex; i <= endIndex; i += 1) {
+    result.push(array[i]);
+  }
+  return result;
+}
+
+halvsies([1, 2, 3, 4]); // [[1, 2], [3, 4]]
+halvsies([1, 5, 2, 4, 3]); // [[1, 5, 2], [4, 3]]
+halvsies([5]); // [[5], []]
+halvsies([]); // [[], []]
+*/
+
+//4)
