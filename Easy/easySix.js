@@ -40,3 +40,23 @@ swapName("Joe Roberts"); // "Roberts, Joe"
 */
 
 // 6)
+/*
+function sequence(count, multiple) {
+  let result = [];
+  if (count === 0) {
+    return console.log([]);
+  }
+
+  for (let i = 1; i <= count; i += 1) {
+    result.push(multiple * i);
+  }
+  console.log(result);
+}
+
+sequence(5, 1); // [1, 2, 3, 4, 5]
+sequence(4, -7); // [-7, -14, -21, -28]
+sequence(3, 0); // [0, 0, 0]
+sequence(0, 1000000); // []
+*/
+
+// 7)
