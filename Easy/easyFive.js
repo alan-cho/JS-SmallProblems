@@ -57,3 +57,41 @@ dms(360); // 360°00'00" or 0°00'00"
 */
 
 //2)
+/*
+Understand the Problem
+  Input: Two Arrays
+  Output: One Merged Array
+
+  Explicit:
+    The returned array must have no duplicates.
+    Inputs will always be arrays.
+
+  Implicit:
+    The elements are integers.
+
+Data Structures
+  Array
+
+Algorithms
+  Copy the first array.
+  Iterate through the second array.
+  Check if the first array includes the element in the second array.
+  Add the element to the copied array if it's unique, otherwise skip it.
+  Return the copied array.
+
+Implement the Code
+
+function union(arrayOne, arrayTwo) {
+  let result = arrayOne.slice();
+  arrayTwo.forEach(function (element) {
+    if (!arrayOne.includes(element)) {
+      result.push(element);
+    }
+  });
+  return console.log(result);
+}
+
+union([1, 3, 5], [3, 6, 9]); // [1, 3, 5, 6, 9]
+*/
+
+//3)
