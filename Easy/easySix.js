@@ -31,3 +31,12 @@ sequence(1); // [1]
 */
 
 // 5)
+/*
+function swapName(name) {
+  let result = name.split(" ");
+  console.log(result[1], result[0]);
+}
+swapName("Joe Roberts"); // "Roberts, Joe"
+*/
+
+// 6)
