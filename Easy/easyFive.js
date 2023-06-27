@@ -293,3 +293,39 @@ multiplicativeAverage([2, 5, 7, 11, 13, 17]); // "28361.667"
 */
 
 //7)
+/*
+Understand the Problem
+  Input: Array With Two Nested Arrays
+  Output: Array 
+
+  Explicit:
+    The input array contains two nested arrays - these nested arrays contain integers only.
+    Return an array that contains the product of the two elements from the same indices of their respective array.
+
+  Implicit:
+    Both arrays are the same length.
+
+Data Structures
+  Array
+
+Algorithms
+  Iterate through the first array.
+  Multiply the element from the first array with the element from the second array.
+    Use the same index when iterating through the array to select the correct elements.
+  Push that product to the result array.
+  Return the result array.
+
+Implement the Code
+
+function multiplyList(arrayOne, arrayTwo) {
+  let result = [];
+  for (let i = 0; i < arrayOne.length; i += 1) {
+    let product = arrayOne[i] * arrayTwo[i];
+    result.push(product);
+  }
+
+  return console.log(result);
+}
+
+multiplyList([3, 5, 7], [9, 10, 11]); // [27, 50, 77];
+*/
