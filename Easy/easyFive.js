@@ -209,3 +209,50 @@ findDup([
 */
 
 //5)
+/*
+Understand the Problem
+  Input: Two Arrays
+  Output: One Array
+
+  Explicit:
+    Takes two arrays as input - these arrays may contain anything.
+    Return an array that combines the two arrays.
+    This combination specifies the adding elements in alteration to the return array.
+
+  Implicit:
+    The two arrays are the same length.
+
+Data Structures
+  Array
+
+Algorithms
+  Create an array.
+  Iterate through an array.
+  Add the element to every odd indices.
+  Iterate through the other array.
+  Add the element to every even indices.
+
+Implement the Code
+
+function interLeave(arrayOne, arrayTwo) {
+  let result = [];
+
+  let evenIndices = 0;
+  for (let i = 0; i < arrayOne.length; i += 1) {
+    result[evenIndices] = arrayOne[i];
+    evenIndices += 2;
+  }
+
+  let oddIndices = 1;
+  for (let j = 0; j < arrayTwo.length; j += 1) {
+    result[oddIndices] = arrayTwo[j];
+    oddIndices += 2;
+  }
+
+  return console.log(result);
+}
+
+interLeave([1, 2, 3], ["a", "b", "c"]); // [1, "a", 2, "b", 3, "c"]
+*/
+
+//6)
