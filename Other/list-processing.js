@@ -59,3 +59,38 @@ leadingSubstrings("xyzzy"); // ["x", "xy", "xyz", "xyzz", "xyzzy"]
 */
 
 // 5)
+/*
+function substrings(string) {
+  let result = [];
+  for (let i = 0; i < string.length; i += 1) {
+    let counterIndex = 0;
+    for (let j = i; j < string.length; j += 1) {
+      result.push(string.slice(i, j + 1));
+    }
+  }
+
+  console.log(result);
+}
+substrings("abcde");
+
+// returns
+[
+  "a",
+  "ab",
+  "abc",
+  "abcd",
+  "abcde",
+  "b",
+  "bc",
+  "bcd",
+  "bcde",
+  "c",
+  "cd",
+  "cde",
+  "d",
+  "de",
+  "e",
+];
+*/
+
+// 6)
