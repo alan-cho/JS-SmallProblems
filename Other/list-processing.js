@@ -113,3 +113,25 @@ sumOfSums([1, 2, 3, 4, 5]); // 35
 */
 
 // 8)
+/*
+function buyFruit(fruits) {
+  let result = [];
+  fruits.forEach(function (array) {
+    let [fruit, number] = array;
+    for (let i = 0; i < number; i += 1) {
+      result.push(fruit);
+    }
+  });
+
+  console.log(result);
+}
+
+buyFruit([
+  ["apple", 3],
+  ["orange", 1],
+  ["banana", 2],
+]);
+// returns ["apple", "apple", "apple", "orange", "banana", "banana"]
+*/
+
+// 9)
