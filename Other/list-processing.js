@@ -93,18 +93,23 @@ substrings("abcde");
 ];
 */
 
-// 6)
-function palindromes(string) {}
+// 6) SKIPPED
 
-palindromes("abcd"); // []
-palindromes("madam"); // [ "madam", "ada" ]
+// 7)
+/*
+function sumOfSums(array) {
+  let runningTotal = 0;
+  for (let i = 1; i <= array.length; i += 1) {
+    array.slice(0, i).forEach((number) => (runningTotal += number));
+  }
 
-palindromes("hello-madam-did-madam-goodbye");
-// returns
-// [ "ll", "-madam-", "-madam-did-madam-", "madam", "madam-did-madam", "ada",
-//   "adam-did-mada", "dam-did-mad", "am-did-ma", "m-did-m", "-did-", "did",
-//   "-madam-", "madam", "ada", "oo" ]
+  console.log(runningTotal);
+}
 
-palindromes("knitting cassettes");
-// returns
-// [ "nittin", "itti", "tt", "ss", "settes", "ette", "tt" ]
+sumOfSums([3, 5, 2]); // (3) + (3 + 5) + (3 + 5 + 2) --> 21
+sumOfSums([1, 5, 7, 3]); // (1) + (1 + 5) + (1 + 5 + 7) + (1 + 5 + 7 + 3) --> 36
+sumOfSums([4]); // 4
+sumOfSums([1, 2, 3, 4, 5]); // 35
+*/
+
+// 8)
