@@ -79,3 +79,23 @@ wordCap('this is a "quoted" word'); // 'This Is A "quoted" Word'
 */
 
 // 5)
+/*
+function swapCase(string) {
+  let result = "";
+
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === string[i].toLowerCase()) {
+      result += string[i].toUpperCase();
+    } else {
+      result += string[i].toLowerCase();
+    }
+  }
+
+  console.log(result);
+}
+
+swapCase("CamelCase"); // "cAMELcASE"
+swapCase("Tonight on XYZ-TV"); // "tONIGHT ON xyz-tv"
+*/
+
+// 6)
