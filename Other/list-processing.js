@@ -28,3 +28,18 @@ alphabeticNumberSort([
 */
 
 // 3)
+/*
+function multiplyAllPairs(arrayOne, arrayTwo) {
+  let result = [];
+  arrayTwo.forEach(function (number) {
+    result.push(number * arrayOne[0]);
+    result.push(number * arrayOne[1]);
+  });
+  result.sort((a, b) => a - b);
+  console.log(result);
+}
+
+multiplyAllPairs([2, 4], [4, 3, 1, 2]); // [2, 4, 4, 6, 8, 8, 12, 16]
+*/
+
+// 4)
