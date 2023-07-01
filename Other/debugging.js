@@ -365,4 +365,4 @@ console.log(median(quarter3ExamScores) === 87);
 console.log(median(quarter4ExamScores) === 89.5);
 */
 
-// 9)
+// 9 - 10) SKIPPED
