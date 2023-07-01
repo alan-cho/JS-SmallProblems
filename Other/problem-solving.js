@@ -116,3 +116,78 @@ diamond(9);
 */
 
 // 3)
+/*
+Understand the Problem
+  Input: String
+  Output: Boolean
+
+  Explicit:
+    Given a set of blocks:
+      B:O   X:K   D:Q   C:P   N:A
+      G:T   R:E   F:S   J:W   H:U
+      V:I   L:Y   Z:M
+    Can we create the inputted string using these blocks only once, without using both letters on the block?
+      Return true or false dependening on this question.
+    Can't reuse letter blocks.
+    Can't use both letters on the block.
+
+  Implicit:
+    Case-insensitive.
+
+Data Structures
+  Array
+    Object
+      Key: Letters, haveUsed
+      Values: String, Boolean
+  Array
+    Holds the objects that are used.
+
+Algorithms
+  Initialize the nested data structure - set all values to false for the block objects.
+  Iterate Through the Word
+    Check what block object holds the letter - set it to haveUsed: true
+    Add that block object to the holder array.
+    Keep checking throughout the word.
+      If there's a block that's already has haveUsed: true - return false;
+      Else return true;
+
+Implement the Code
+
+function isBlockWord(word) {
+  let buildingBlocks = [
+    { Letters: ["B", "O"], haveUsed: false },
+    { Letters: ["X", "K"], haveUsed: false },
+    { Letters: ["D", "Q"], haveUsed: false },
+    { Letters: ["C", "P"], haveUsed: false },
+    { Letters: ["N", "A"], haveUsed: false },
+    { Letters: ["G", "T"], haveUsed: false },
+    { Letters: ["R", "E"], haveUsed: false },
+    { Letters: ["F", "S"], haveUsed: false },
+    { Letters: ["J", "W"], haveUsed: false },
+    { Letters: ["H", "U"], haveUsed: false },
+    { Letters: ["V", "I"], haveUsed: false },
+    { Letters: ["L", "Y"], haveUsed: false },
+    { Letters: ["Z", "M"], haveUsed: false },
+  ];
+
+  //Loop through the word
+  for (let j = 0; j < word.length; j += 1) {
+    //Loops through the blocks
+    for (let k = 0; k < buildingBlocks.length; k += 1) {
+      if (buildingBlocks[k]["Letters"].includes(word[j])) {
+        if (buildingBlocks[k]["haveUsed"] === true) {
+          return console.log(false);
+        }
+        buildingBlocks[k]["haveUsed"] = true;
+      }
+    }
+  }
+  return console.log(true);
+}
+
+isBlockWord("BATCH"); // true
+isBlockWord("BUTCH"); // false
+isBlockWord("jest"); // true
+*/
+
+// 4)
