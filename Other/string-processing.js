@@ -120,4 +120,33 @@ staggeredCase("ALL_CAPS"); // "AlL_CaPs"
 staggeredCase("ignore 77 the 4444 numbers"); // "IgNoRe 77 ThE 4444 nUmBeRs"
 */
 
-// 7)
+// 7) SKIPPED
+
+// 8)
+/*
+function wordLengths(string) {
+  let result = [];
+  if (string === undefined || !string) {
+    return console.log(result);
+  }
+  string.split(" ").forEach((word) => result.push(`${word} ${word.length}`));
+  return console.log(result);
+}
+
+wordLengths("cow sheep chicken");
+// ["cow 3", "sheep 5", "chicken 7"]
+
+wordLengths("baseball hot dogs and apple pie");
+// ["baseball 8", "hot 3", "dogs 4", "and 3", "apple 5", "pie 3"]
+
+wordLengths("It ain't easy, is it?");
+// ["It 2", "ain't 5", "easy, 5", "is 2", "it? 3"]
+
+wordLengths("Supercalifragilisticexpialidocious");
+// ["Supercalifragilisticexpialidocious 34"]
+
+wordLengths(""); // []
+wordLengths(); // []
+*/
+
+// 9)
