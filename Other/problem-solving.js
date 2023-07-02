@@ -191,3 +191,65 @@ isBlockWord("jest"); // true
 */
 
 // 4)
+/*
+Understand the Problem
+  Input: Integer
+  Output: Strings
+
+  Explicit:
+    Given an integer we output an eight-pointed star using *'s.
+    The integer given is at least 7 and it's an odd number.
+  Implicit:
+    The width of the star is the integer.
+    Each row besides the middle will only contain three *'s.
+    The spacing between the stars in each row starts from 0 at the middle and increases by 1.
+
+Example / Test Cases
+  *  *  *
+   * * *
+    ***
+  *******
+    ***
+   * * *
+  *  *  *
+
+Data Structures
+  String
+
+Algorithms
+  Initialize and create the middle row.
+  Create and log the top half.
+  Log the middle row.
+  Create and log the bottom half.
+
+Implement the Code
+
+function buildStarRow(spacesBetween, spacesPadding) {
+  let asterisks = ["*", "*", "*"];
+  let starRow = asterisks.join(" ".repeat(spacesBetween));
+  let paddedStarRow = " ".repeat(spacesPadding) + starRow;
+
+  return paddedStarRow;
+}
+
+function star(size) {
+  let middleIdx = Math.floor(size / 2);
+
+  for (let idx = 0; idx < middleIdx; idx += 1) {
+    let spacesBetween = (size - 3) / 2 - idx;
+    let spacesPadding = idx;
+    console.log(buildStarRow(spacesBetween, spacesPadding));
+  }
+
+  console.log("*".repeat(size));
+
+  for (let idx = 0; idx < middleIdx; idx += 1) {
+    let spacesBetween = idx;
+    let spacesPadding = (size - 3) / 2 - idx;
+    console.log(buildStarRow(spacesBetween, spacesPadding));
+  }
+}
+
+star(7);
+star(9);
+*/
