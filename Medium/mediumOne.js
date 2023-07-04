@@ -157,3 +157,89 @@ maxRotation(8703529146); // 7321609845
 */
 
 // 4)
+/*
+function minilang(command) {
+  let register = 0;
+  let stack = [];
+  let commands = command.split(" ");
+  const COMMAND_FUNCTIONS = [
+    "ADD",
+    "SUB",
+    "MULT",
+    "DIV",
+    "REMAINDER",
+    "N",
+    "PUSH",
+    "POP",
+    "PRINT",
+  ];
+  //console.log(commands);
+
+  commands.forEach(function (keyWord) {
+    //console.log("The keyword is:", keyWord);
+    if (!COMMAND_FUNCTIONS.includes(keyWord) || keyWord === "N") {
+      //console.log("Invoked N");
+      register = +keyWord;
+    } else if (keyWord === "ADD") {
+      //console.log("Invoked Add");
+      register += stack.pop();
+    } else if (keyWord === "SUB") {
+      //console.log("Invoked Sub");
+      register -= stack.pop();
+    } else if (keyWord === "MULT") {
+      //console.log("Invoked Mult");
+      register *= stack.pop();
+    } else if (keyWord === "DIV") {
+      //console.log("Invoked Div");
+      register = Math.trunc(register / stack.pop());
+    } else if (keyWord === "REMAINDER") {
+      //console.log("Invoked Remainder");
+      register = register % stack.pop();
+    } else if (keyWord === "POP") {
+      //console.log("Invoked Pop");
+      register = stack.pop();
+    } else if (keyWord === "PUSH") {
+      //console.log("Invoked Push");
+      stack.push(register);
+    } else if (keyWord === "PRINT") {
+      //console.log("Invoked Print");
+      console.log(register);
+    }
+  });
+  //console.log(stack, register);
+}
+
+minilang("PRINT");
+// 0
+
+minilang("5 PUSH 3 MULT PRINT");
+// 15
+
+minilang("5 PRINT PUSH 3 PRINT ADD PRINT");
+// 5
+// 3
+// 8
+
+minilang("5 PUSH POP PRINT");
+// 5
+
+minilang("3 PUSH 4 PUSH 5 PUSH PRINT ADD PRINT POP PRINT ADD PRINT");
+// 5
+// 10
+// 4
+// 7
+
+minilang("3 PUSH PUSH 7 DIV MULT PRINT");
+// 6
+
+minilang("4 PUSH PUSH 7 REMAINDER MULT PRINT");
+// 12
+
+minilang("-3 PUSH 5 SUB PRINT");
+// 8
+
+minilang("6 PUSH");
+// (nothing is printed because the `program` argument has no `PRINT` commands)
+*/
+
+// 5)
