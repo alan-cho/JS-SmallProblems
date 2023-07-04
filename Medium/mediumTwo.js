@@ -192,3 +192,61 @@ triangle(50, 50, 50); // "invalid"
 */
 
 // 4)
+/*
+Understand the Problem
+  Input: Integer
+  Output: Integer
+
+  Explicit:
+    Given a year (integer) return the amount of fridays that fall on the 13th of a month in that year (integer).
+    The year will always be past 1752.
+
+Data Structures
+  Array
+
+Algorithms
+  Initialize an array of the months in a year.
+  Initialize a variable, count, assigned to 0.
+  Iterate through the array.
+    On each element, find the date (weekday) for that 13th of that month.
+    If found, add one to count.
+  Return count.
+
+Implement the Code
+function fridayThe13ths(year) {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const day = "13";
+  let count = 0;
+
+  months.forEach((month) => {
+    let date = new Date(`${month} ${day}, ${year}`);
+    if (date.getDay() === 5) {
+      count += 1;
+    }
+  });
+
+  return console.log(count);
+}
+
+fridayThe13ths(1986); // 1
+fridayThe13ths(2015); // 3
+fridayThe13ths(2017); // 2
+*/
+
+// 5)
+/*
+
+*/
