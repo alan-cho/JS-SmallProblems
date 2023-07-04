@@ -131,3 +131,64 @@ triangle(3, 1, 1); // "invalid"
 */
 
 // 3)
+/*
+Understand the Problem
+  Input: Integer, Integer, Integer
+  Output: String
+
+  Explicit:
+    Given three angles of a triangle (integer) return what type of triangle it is (string) or if it's invalid.
+    Valid Triangle:
+      All angles add up to 180.
+      All angles are greater than 0.
+    Acute: 90 Angle
+    Obtuse: More than 90.
+    Acute: Less than 90.
+
+Data Structures
+  Array
+
+Algorithms
+  Initialize an array and assign it to the array.
+  Check if triangle is valid.
+    Iterate through array, add all elements. Check if it adds up to 180.
+    Check if all elements are larger than 0.
+  If valid, check if it has angles larger, smaller, or are 90 degrees.
+    Return the corresponding triangle type.
+
+Implement the Code
+function triangle(angOne, angTwo, angThree) {
+  let triangleAngles = [angOne, angTwo, angThree].sort((a, b) => a - b);
+  let totalDegrees = 0;
+  let isTriangleValid = true;
+
+  triangleAngles.forEach((angle) => {
+    totalDegrees += angle;
+    if (angle < 1) {
+      isTriangleValid = false;
+    }
+  });
+
+  if (totalDegrees !== 180) {
+    isTriangleValid = false;
+  }
+
+  if (!isTriangleValid) {
+    return console.log("Invalid");
+  } else if (triangleAngles[2] > 90) {
+    return console.log("Obtuse");
+  } else if (triangleAngles[2] < 90) {
+    return console.log("Acute");
+  } else {
+    return console.log("Right");
+  }
+}
+
+triangle(60, 70, 50); // "acute"
+triangle(30, 90, 60); // "right"
+triangle(120, 50, 10); // "obtuse"
+triangle(0, 90, 90); // "invalid"
+triangle(50, 50, 50); // "invalid"
+*/
+
+// 4)
