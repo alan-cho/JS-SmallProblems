@@ -59,3 +59,75 @@ letterPercentages("123");
 */
 
 // 2)
+/*
+Understand the Problem
+  Input: Integer, Integer, Integer
+  Output: String
+
+  Explicit:
+    Given three sides of a triangle (integers), return the type of triangle (string) or if it's invalid.
+    To be considered a valid triangle:
+      Two of the shortest sides of the triangle added must be larger than the last side.
+      Every side must be larger than 0.
+    Equilateral: All three sides are the same length.
+    Isosceles: Two sides are the same length.
+    Scalene: All sides are different lengths.
+
+Data Structures
+  Array
+
+Algorithms
+  Initialize an array and assign it the three arguments.
+  Sort the array by smallest to largest numerically.
+  Check if it makes up a valid triangle.
+    Check if all elements are greater than 0.
+    Check if the first two elements added are larger than the second element.
+  Else
+    Return invalid.
+  Check what type of triangle it is.
+    If all elements are the same.
+      Return equilateral.
+    If two elements are the same.
+      Return isosceles.
+    If all elements are unique.
+      Return scalene.
+Implement the Code
+function triangle(sideOne, sideTwo, sideThree) {
+  let triangleSides = [sideOne, sideTwo, sideThree].sort((a, b) => a - b);
+  let isTriangleValid = true;
+
+  triangleSides.forEach((side) => {
+    if (side < 1) {
+      isTriangleValid = false;
+    }
+  });
+
+  if (triangleSides[0] + triangleSides[1] < triangleSides[2]) {
+    isTriangleValid = false;
+  }
+
+  if (!isTriangleValid) {
+    return console.log("Invalid");
+  } else if (
+    triangleSides[0] === triangleSides[1] &&
+    triangleSides[1] === triangleSides[2]
+  ) {
+    return console.log("Equilateral");
+  } else if (
+    triangleSides[0] === triangleSides[1] ||
+    triangleSides[0] === triangleSides[2] ||
+    triangleSides[1] === triangleSides[2]
+  ) {
+    return console.log("Isosceles");
+  } else {
+    return console.log("Scalene");
+  }
+}
+triangle(3, 3, 3); // "equilateral"
+triangle(3, 3, 1.5); // "isosceles"
+triangle(3, 4, 5); // "scalene"
+triangle(0, 3, 3); // "invalid"
+triangle(3, 1, 1); // "invalid"
+*/
+
+// 3)
