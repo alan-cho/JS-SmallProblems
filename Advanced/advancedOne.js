@@ -85,3 +85,41 @@ transpose([
 */
 
 // 4)
+/*
+function rotate90(matrix) {
+  let transposedMatrix = [];
+  for (
+    let matrixElement = 0;
+    matrixElement < matrix[0].length;
+    matrixElement += 1
+  ) {
+    let row = [];
+    for (let matrixRows = 0; matrixRows < matrix.length; matrixRows += 1) {
+      row.push(matrix[matrixRows][matrixElement]);
+    }
+    transposedMatrix.push(row.reverse());
+  }
+  return transposedMatrix;
+}
+
+let matrix1 = [
+  [1, 5, 8],
+  [4, 7, 2],
+  [3, 9, 6],
+];
+
+let matrix2 = [
+  [3, 7, 4, 2],
+  [5, 1, 0, 8],
+];
+
+let newMatrix1 = rotate90(matrix1);
+let newMatrix2 = rotate90(matrix2);
+let newMatrix3 = rotate90(rotate90(rotate90(rotate90(matrix2))));
+
+console.log(newMatrix1); // [[3, 4, 1], [9, 7, 5], [6, 2, 8]]
+console.log(newMatrix2); // [[5, 3], [1, 7], [0, 4], [8, 2]]
+console.log(newMatrix3); // `matrix2` --> [[3, 7, 4, 2], [5, 1, 0, 8]]
+*/
+
+// 5)
