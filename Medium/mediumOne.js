@@ -243,3 +243,51 @@ minilang("6 PUSH");
 */
 
 // 5)
+/*
+Understand the Problem
+  Input: String
+  Output: String
+
+  Explicit:
+    Input a string that contains words and numbers written as words.
+    Replace every number word with its corresponding digit.
+    Output the string with the replaced number words.
+    The only possible numbers are 0-9.
+
+Data Structures
+  String -> Array -> String
+
+Algorithms
+  Initialize and declare a constant that contains all of the number words and its appropriate digit.
+  Initialize an array and input the words into the array as elements.
+  Iterate through the array, checking if the word matches one of the number words in the constant.
+    If they do match then replace the number word with its corresponding digit.
+  Join the array back into a string and return the string.
+
+Implement the Code
+function wordToDigit(string) {
+  const numberWords = {
+    zero: "0",
+    one: "1",
+    two: "2",
+    three: "3",
+    four: "4",
+    five: "5",
+    six: "6",
+    seven: "7",
+    eight: "8",
+    nine: "9",
+  };
+
+  Object.keys(numberWords).forEach((word) => {
+    let regex = new RegExp(word, "g");
+    string = string.replace(regex, numberWords[word]);
+  });
+  console.log(string);
+}
+
+wordToDigit("Please call me at five five five one two three four. Thanks.");
+// "Please call me at 5 5 5 1 2 3 4. Thanks."
+*/
+
+// 6)
