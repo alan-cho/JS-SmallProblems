@@ -331,3 +331,38 @@ findFibonacciIndexByLength(3); // 1 1 2 3 5 8 13 21 34 55 89 144
 */
 
 // 7)
+/*
+function fibonacci(nth) {
+  if (nth === 1 || nth === 2) {
+    return 1;
+  }
+  return fibonacci(nth - 2) + fibonacci(nth - 1);
+}
+console.log(fibonacci(1)); // 1
+console.log(fibonacci(2)); // 1
+console.log(fibonacci(3)); // 2
+console.log(fibonacci(4)); // 3
+console.log(fibonacci(5)); // 5
+console.log(fibonacci(12)); // 144
+console.log(fibonacci(20)); // 6765
+*/
+
+// 8)
+/*
+function fibonacci(nth) {
+  let firstNumber = 1;
+  let secondNumber = 1;
+  let result = 0;
+  for (let i = 3; i <= nth; i += 1) {
+    result = firstNumber + secondNumber;
+    firstNumber = secondNumber;
+    secondNumber = result;
+  }
+  console.log(result);
+}
+fibonacci(20); // 6765
+fibonacci(50); // 12586269025
+fibonacci(75); // 2111485077978050
+*/
+
+// 9)
