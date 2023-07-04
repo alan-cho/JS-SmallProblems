@@ -291,3 +291,43 @@ wordToDigit("Please call me at five five five one two three four. Thanks.");
 */
 
 // 6)
+/*
+Understand the Problem
+  Input: Integer
+  Output: Integer
+
+  Explicit:
+    The input integer represents the amount of digits we are looking for.
+    Output would be the first integer the matches the amount of digits we are looking for.
+    
+Data Structures
+  Number and Array
+
+Algorithms
+  Initialize and declare an array assigned [1, 1].
+  While Loop
+    The last two elements from the end of the array, add them together and push it to the array.
+    Check if it matches the number of digits from the input.
+      Break
+  Log the element that matched the number of digits.
+
+Implement the Code
+function findFibonacciIndexByLength(digits) {
+  let fibonacciArr = [1, 1];
+  while (true) {
+    let fibonacciNum =
+      fibonacciArr[fibonacciArr.length - 2] +
+      fibonacciArr[fibonacciArr.length - 1];
+    fibonacciArr.push(fibonacciNum);
+
+    if (String(fibonacciNum).split("").length === digits) {
+      return console.log(fibonacciNum);
+    }
+  }
+}
+
+findFibonacciIndexByLength(2); // 1 1 2 3 5 8 13
+findFibonacciIndexByLength(3); // 1 1 2 3 5 8 13 21 34 55 89 144
+*/
+
+// 7)
