@@ -402,3 +402,59 @@ sumSquareDifference(100); // 25164150
 */
 
 // 7)
+/*
+Understand the Problem
+  Input: Array
+  Output: Array
+
+  Explicit:
+    Given an array of at least two elements, sort the array using the bubble algorithm:
+      Iterate through the array.
+      Compare the element with the following element.
+      If the element is larger than the second element, swap them.
+      Otherwise, don't swap.
+      If the array is iterated through without making a single swap, return the array.
+    Mutate the original input, the array given should be also returned.
+
+Data Structures
+  Array
+
+Algorithms
+  Initialize a variable, swap.
+  Iterate through the array.
+    If array element one is larger than two, then swap the elements.
+    Add one to swap.
+  If no swaps are made - return array.
+Implement the Code
+function bubbleSort(array) {
+  while (true) {
+    let swaps = 0;
+    for (let i = 0; i < array.length - 1; i += 1) {
+      let firstEle = array[i];
+      let secondEle = array[i + 1];
+      if (array[i] > array[i + 1]) {
+        array[i] = secondEle;
+        array[i + 1] = firstEle;
+        swaps += 1;
+      }
+    }
+    if (swaps === 0) {
+      return array;
+    }
+  }
+}
+
+let array1 = [5, 3];
+bubbleSort(array1);
+console.log(array1); // [3, 5]
+
+let array2 = [6, 2, 7, 1, 4];
+bubbleSort(array2);
+console.log(array2); // [1, 2, 4, 6, 7]
+
+let array3 = ["Sue", "Pete", "Alice", "Tyler", "Rachel", "Kim", "Bonnie"];
+bubbleSort(array3);
+console.log(array3); // ["Alice", "Bonnie", "Kim", "Pete", "Rachel", "Sue", "Tyler"]
+*/
+
+// 8)
