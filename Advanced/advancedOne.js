@@ -123,3 +123,46 @@ console.log(newMatrix3); // `matrix2` --> [[3, 7, 4, 2], [5, 1, 0, 8]]
 */
 
 // 5)
+/*
+function merge(arrayOne, arrayTwo) {
+  let mergedArray = [];
+  let arrayOneCopy = arrayOne.slice();
+  let arrayTwoCopy = arrayTwo.slice();
+
+  if (arrayOne.length === 0) {
+    mergedArray = mergedArray.concat(arrayTwo);
+    return console.log(mergedArray);
+  } else if (arrayTwo.length === 0) {
+    mergedArray = mergedArray.concat(arrayOne);
+    return console.log(mergedArray);
+  }
+
+  while (true) {
+    if (arrayOneCopy[0] < arrayTwoCopy[0]) {
+      mergedArray.push(arrayOneCopy[0]);
+      arrayOneCopy.splice(0, 1);
+    } else if (arrayOneCopy[0] > arrayTwoCopy[0]) {
+      mergedArray.push(arrayTwoCopy[0]);
+      arrayTwoCopy.splice(0, 1);
+    }
+
+    if (arrayOneCopy.length === 0 && arrayTwoCopy.length !== 0) {
+      mergedArray = mergedArray.concat(arrayTwoCopy);
+      break;
+    } else if (arrayOneCopy.length !== 0 && arrayTwoCopy.length === 0) {
+      mergedArray = mergedArray.concat(arrayOneCopy);
+      break;
+    } else if (arrayOneCopy.length === 0 && arrayTwoCopy.length === 0) {
+      break;
+    }
+  }
+  return console.log(mergedArray);
+}
+
+merge([1, 5, 9], [2, 6, 8]); // [1, 2, 5, 6, 8, 9]
+merge([1, 1, 3], [2, 2]); // [1, 1, 2, 2, 3]
+merge([], [1, 4, 5]); // [1, 4, 5]
+merge([1, 4, 5], []); // [1, 4, 5]
+*/
+
+// 6)
