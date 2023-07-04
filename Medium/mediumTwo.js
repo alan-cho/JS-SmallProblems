@@ -248,5 +248,111 @@ fridayThe13ths(2017); // 2
 
 // 5)
 /*
+Understand the Problem
+  Input: Integer
+  Output: Integer
 
+  Explicit:
+    Given a number (integer input), return the next largest unique integer (output).
+    Valid Unique Number:
+      Must be odd.
+      Must be divisible by 7.
+      Every digit in the number must be unique.
+    If there's no more valid larger unique numbers, return invalid.
+    The largest possible value is 9876543201.
+
+Data Structures
+  Array
+
+Algorithms
+  Initialize an empty array.
+  Initialize a isOdd, isMultipleOfSeven, isAllDigitsUnique variable.
+  Initialize a CONST LARGEST_UNIQUE_NUMBER;
+  Initialize a count variable assigned to inputted integer.
+  While Loop 
+    If count is equal to largest number.
+      Return invalid.
+    If count is divisible by seven.
+      isMultipleOfSeven = true;
+    If count is odd.
+      isOdd = true;
+    If all digits are unique.
+      isAllDigitsUnique = true;
+
+    If isOdd, isMultipleOfSeven, isAllDigitsUnique are true.
+      Return count.
+    
+    Add one to count.
+
+  Check if all digits are unique.
+    Change count to a string, and split it into an array.
+    Iterate through the array.
+      Splice the array to remove the element that we're iterating over.
+      If the element is still in the array - isAllDigitsUnique = false. 
+Implement the Code
+function featured(number) {
+  const LARGEST_UNIQUE_NUMBER = 9876543201;
+  let isOdd = false,
+    isMultipleOfSeven = false,
+    isAllDigitsUnique = false;
+  let count = number;
+
+  while (true) {
+    if (count === LARGEST_UNIQUE_NUMBER) {
+      return console.log("Invalid");
+    }
+    if (count % 2 === 1) {
+      isOdd = true;
+    }
+
+    if (count % 7 === 0) {
+      isMultipleOfSeven = true;
+    }
+
+    if (checkUniqueDigits(count)) {
+      isAllDigitsUnique = true;
+    }
+
+    if (
+      isOdd === true &&
+      isMultipleOfSeven === true &&
+      isAllDigitsUnique === true &&
+      count > number
+    ) {
+      return console.log(count);
+    }
+
+    count += 1;
+    isOdd = false;
+    isMultipleOfSeven = false;
+    isAllDigitsUnique = false;
+  }
+}
+
+function checkUniqueDigits(number) {
+  let digits = String(number).split("");
+  let result = true;
+  digits.forEach((digit) => {
+    let copyOfDigits = digits.slice();
+    copyOfDigits.splice(copyOfDigits.indexOf(digit), 1);
+    if (copyOfDigits.includes(digit)) {
+      result = false;
+    }
+  });
+
+  return result;
+}
+
+featured(12); // 21
+featured(20); // 21
+featured(21); // 35
+featured(997); // 1029
+featured(1029); // 1043
+featured(999999); // 1023547
+featured(999999987); // 1023456987
+featured(9876543186); // 9876543201
+featured(9876543200); // 9876543201
+featured(9876543201); // "There is no possible number that fulfills those requirements."
 */
+
+// 6)
