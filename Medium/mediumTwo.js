@@ -356,3 +356,49 @@ featured(9876543201); // "There is no possible number that fulfills those requir
 */
 
 // 6)
+/*
+Understand the Problem
+  Input: Integer
+  Output: Integer
+
+  Explicit:
+    Given a number, find the difference between these two numbers (X represents the inputted integer):
+      Sum of the numbers of the first X numbers, squared.
+      Sum of the squared numbers of the first X numbers.
+    Return the difference.
+
+Data Structures
+  Array
+
+Algorithms
+  Initialize and declare an array, assigned to the numbers: 1 to Input.
+  Initialize variables, sumOfNumbers and sumOfSquaredNumbers.
+  Iterate through the array.
+    Add each number to sumOfNumbers.
+    Add each number, squared, to sumOfSquaredNumbers.
+  Return sumOfNumbers, squared, - sumOfSquaredNumbers.
+
+Implement the Code
+function sumSquareDifference(number) {
+  let arrayNum = [];
+  let sumOfNumbers = 0,
+    sumOfSquaredNumbers = 0;
+
+  for (let i = 1; i <= number; i += 1) {
+    arrayNum.push(i);
+  }
+
+  arrayNum.forEach((num) => {
+    sumOfNumbers += num;
+    sumOfSquaredNumbers += num ** 2;
+  });
+
+  return console.log(sumOfNumbers ** 2 - sumOfSquaredNumbers);
+}
+sumSquareDifference(3); // 22 --> (1 + 2 + 3)**2 - (1**2 + 2**2 + 3**2)
+sumSquareDifference(10); // 2640
+sumSquareDifference(1); // 0
+sumSquareDifference(100); // 25164150
+*/
+
+// 7)
