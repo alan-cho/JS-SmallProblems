@@ -55,3 +55,33 @@ console.log(matrix); // [[1, 5, 8], [4, 7, 2], [3, 9, 6]]
 */
 
 // 3)
+/*
+function transpose(matrix) {
+  let transposedMatrix = [];
+  for (
+    let matrixElement = 0;
+    matrixElement < matrix[0].length;
+    matrixElement += 1
+  ) {
+    let row = [];
+    for (let matrixRows = 0; matrixRows < matrix.length; matrixRows += 1) {
+      row.push(matrix[matrixRows][matrixElement]);
+    }
+    transposedMatrix.push(row);
+  }
+  return console.log(transposedMatrix);
+}
+
+transpose([[1, 2, 3, 4]]); // [[1], [2], [3], [4]]
+transpose([[1], [2], [3], [4]]); // [[1, 2, 3, 4]]
+transpose([[1]]); // [[1]]
+
+transpose([
+  [1, 2, 3, 4, 5],
+  [4, 3, 2, 1, 0],
+  [3, 7, 8, 6, 2],
+]);
+// [[1, 4, 3], [2, 3, 7], [3, 2, 8], [4, 1, 6], [5, 0, 2]]
+*/
+
+// 4)
