@@ -104,3 +104,56 @@ rotateRightmostDigits(735291, 6); // 352917
 */
 
 // 3)
+/*
+Understand the Problem
+  Input: Integer
+  Output: Integer
+
+  Explicit:
+    Rotation = Taking the selected digits and placing them at the end of the number.
+    Have a series of rotations on the inputted intger:
+      Rotate the first number.
+      Keep the first number in place.
+      Rotate the second number.
+      Keep the first two numbers in place.
+      Rotate the third number.
+      Keep the first three numbers in place.
+      And so on...
+    Until there are no more unique, viable rotations.
+    Return the rotated number.
+
+Data Structures
+  Integer -> String -> Array -> String -> Integer
+
+Algorithms
+  Initialize and declare the string, array variables and assign them to the integer respective to those data types.
+  Iterate through the array.
+    The loop of the array determines the index of the element that will be rotated.
+    Remove that element from the array.
+    Add that element to the end of the array.
+  Reassign the string variable to the joined array.
+  Coerce the string back into a number.
+  Return the number.
+Implement the Code
+
+function maxRotation(number) {
+  let numberStr = String(number);
+  let numberArr = numberStr.split("");
+
+  for (let i = 0; i < numberArr.length; i += 1) {
+    let numberEle = numberArr[i];
+    numberArr.splice(i, 1);
+    numberArr.push(numberEle);
+  }
+  numberStr = numberArr.join("");
+  return console.log(Number(numberStr));
+}
+
+maxRotation(735291); // 321579
+maxRotation(3); // 3
+maxRotation(35); // 53
+maxRotation(105); // 15 -- the leading zero gets dropped
+maxRotation(8703529146); // 7321609845
+*/
+
+// 4)
